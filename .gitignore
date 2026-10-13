@@ -1,0 +1,35 @@
+# 本機環境與執行資料
+/.venv*/
+/distill-env/
+/runtime/
+/models/
+/data/
+/logs/
+/tmp/
+/dist/
+/gpu-profiles/
+/電腦修復/
+/config.yaml
+/.cleanup-review.md
+/.streamlit/secrets.toml
+
+# 快取、備份與憑證
+**/__pycache__/
+*.py[cod]
+*.bak
+*.bak-*
+*.tmp
+*.partial
+*.log
+*.pid
+*.lock
+*.sqlite*
+*.gguf
+*.safetensors
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db

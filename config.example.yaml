@@ -1,0 +1,22 @@
+ollama_url: http://127.0.0.1:11435
+strata_url: http://127.0.0.1:8088
+strata_config: runtime/strata/strata-iq3_s.json
+preferred_model: qwen3.8:27b-q4_K_M
+generation_architecture: dense_27b
+model_selection: fixed
+generation_context: 32768
+
+# 需要本機生圖服務時啟用，並設定其 Python 與啟動程式路徑。
+image_generation_enabled: false
+image_generation_url: http://127.0.0.1:7860/sdapi/v1/txt2img
+image_priority_unload_resident_models: true
+
+# 顯存不足時自動回退至單頁編寫。
+ollama_parallel: 1
+write_concurrency: 1
+parallel_min_total_vram_mb: 28000
+parallel_min_free_vram_mb: 20000
+
+# 控制台更新頻率（秒）。
+console_refresh_seconds: 1
+slide_logo: off

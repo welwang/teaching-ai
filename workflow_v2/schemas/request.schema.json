@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "grade": {
+      "type": "integer",
+      "minimum": 4,
+      "maximum": 9
+    },
+    "semester": {
+      "enum": [
+        "上學期",
+        "下學期"
+      ]
+    },
+    "subject": {
+      "enum": [
+        "國語",
+        "數學",
+        "英語"
+      ]
+    },
+    "unit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "difficulty": {
+      "enum": [
+        "低難度",
+        "中難度",
+        "高難度",
+        "全部"
+      ]
+    },
+    "slide_count": {
+      "type": "integer",
+      "minimum": 8,
+      "maximum": 50
+    },
+    "source_path": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "page_model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locale": {
+      "const": "zh-TW"
+    },
+    "audience": {
+      "enum": [
+        "國小學童",
+        "國中學生",
+        "大學專題",
+        "企業內訓"
+      ]
+    },
+    "review_outline": {
+      "type": "boolean"
+    },
+    "online_cc0_images": {
+      "type": "boolean"
+    },
+    "ai_illustrations": {
+      "type": "boolean"
+    },
+    "template_style": {
+      "enum": [
+        "自動",
+        "故事探索",
+        "圖解分析",
+        "互動練習",
+        "重點聚焦"
+      ]
+    },
+    "include_worksheet": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema_version",
+    "grade",
+    "semester",
+    "subject",
+    "unit",
+    "publisher",
+    "difficulty",
+    "slide_count",
+    "source_path",
+    "model",
+    "locale"
+  ],
+  "additionalProperties": false
+}

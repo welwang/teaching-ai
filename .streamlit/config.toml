@@ -1,0 +1,3 @@
+# Selected radios / toggles / sliders: a blue readable on both black (夜間) and white (白天); everything else comes from workflow_v2/panel_style.py.
+[theme]
+primaryColor = "#4c8dff"

@@ -1,0 +1,12 @@
+Teaching AI installer
+
+1. Run Install-TeachingAI.cmd.
+2. Choose an installation folder.
+3. After installation, run Start-TeachingAI.cmd.
+4. Install or configure the local model separately. Models and teaching materials are not included.
+5. Install LibreOffice for Windows for PDF/PNG previews. The application uses a workspace copy or the installed system copy.
+
+The system uses Qwen3.8 Dense 27B Q4_K_M automatically, with a fixed 32K context and one presentation at a time.
+
+The package contains application source, the logo, dependency lists and the Windows installer UI only.
+Local image generation (Forge) is switched off in the package; set image_generation_enabled and the two Forge paths in config.yaml to use it.

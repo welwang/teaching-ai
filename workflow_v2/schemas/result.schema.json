@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "running",
+        "rendering",
+        "reviewing",
+        "repairing",
+        "awaiting_outline",
+        "paused",
+        "pausing",
+        "removing",
+        "done",
+        "failed"
+      ]
+    },
+    "stage": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "error": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "quality": {
+      "enum": [
+        "ai_reviewed_draft",
+        "unverified_draft",
+        "visual_incomplete"
+      ]
+    },
+    "final_optimization_status": {
+      "enum": [
+        "completed",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "qa_summary": {
+      "type": "object"
+    },
+    "qa_warning_pages": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "fallback_pages": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "missing_image_pages": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      }
+    },
+    "worksheet_status": {
+      "enum": [
+        "not_requested",
+        "done",
+        "failed"
+      ]
+    },
+    "worksheet_error": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "job_id",
+    "status",
+    "stage",
+    "artifacts",
+    "error",
+    "model"
+  ],
+  "additionalProperties": false
+}
